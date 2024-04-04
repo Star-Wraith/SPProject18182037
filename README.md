@@ -17,7 +17,7 @@ Player는 자신의 쿠키를 이용해서 적 쿠키들을 막고, 상대 건�
 ## 개발 범위
 - 총 3Stage
 - Player 쿠키 10종
-- 적 쿠키 20종(Stage당 6종, 7종, 7종 출현 예정)
+- 적 쿠키 10종(Stage당 3종, 3종, 4종 출현 예정)
 - StartMap, 쿠키 엔트리 설정 Map(Ready Map), InGameMap등 button 약 10개
 - Timer
 
