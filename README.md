@@ -12,6 +12,7 @@
 - StartMap, 쿠키 엔트리 설정 Map(Ready Map), InGameMap등 button 약 10개
 - Timer
 
-#### 예상 게임 실행 흐름
+### 예상 게임 실행 흐름
 
 
+![스크린샷 2024-04-04 152603](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/e885f7ea-83a1-4e2a-8dd9-68151c945479)
