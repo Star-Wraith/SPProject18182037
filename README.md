@@ -15,7 +15,8 @@
 ## 예상 게임 실행 흐름
 
 ### StartMap - Ready Map - InGameMap으로 진행
-![Game](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/393b3562-bc27-488f-9419-303348676495)
+![GameFlow](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/f4c456f0-ba8f-4900-ac15-c4d09992b372)
+
 
 
 ### StartMap
