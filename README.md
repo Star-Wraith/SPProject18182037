@@ -149,7 +149,7 @@ Player는 자신의 쿠키를 이용해서 적 쿠키들을 막고, 상대 건�
 - 5주차 : 적 쿠키 제작 (80%)
 
 
-### 주별 커밋 
+## 주별 커밋 
 ![gitcheck](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/beebd5f2-ad2d-4ebb-aca2-9ceb63253753)
 
 |주차|커밋|
@@ -160,7 +160,7 @@ Player는 자신의 쿠키를 이용해서 적 쿠키들을 막고, 상대 건�
 |4주차|0번|
 |5주차|9번|
 
-### GameObject
+## GameObject
 |CLASS|동작|상호작용 정보|핵심|
 |------|---|-----|----|
 |![cookie0001_chest01](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/801bdaf7-3713-4e36-bc4d-75f78ad4fe03)|10종 캐릭터 클래스, 이동, 공격, 사망 | 오른쪽으로 이동하여 적 발견 시 공격| 이름 그대로 캐릭터 클래스, 행동에 따라 이동/공격/사망 state 변환|
