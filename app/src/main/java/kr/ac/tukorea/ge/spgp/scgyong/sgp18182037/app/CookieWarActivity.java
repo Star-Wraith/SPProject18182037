@@ -2,25 +2,23 @@ package kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.app;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.os.Bundle;
 
-import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.R;
+//import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.BuildConfig;
+import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.game.scene.main.MainScene;
+import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.activity.GameActivity;
+import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.scene.Scene;
+import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.view.Metrics;
 
-public class CookieWarActivity extends AppCompatActivity {
+public class CookieWarActivity extends GameActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        Scene.drawsDebugInfo = BuildConfig.DEBUG;
+        Metrics.setGameSize(16, 9);
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_cookie_war);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        // Scene.drawsDebugInfo 변경 시점에 주의한다.
+        // new GameView() 가 호출되는 super.onCreate() 보다 이전에 해야 한다.
+        new MainScene().push();
     }
 }
