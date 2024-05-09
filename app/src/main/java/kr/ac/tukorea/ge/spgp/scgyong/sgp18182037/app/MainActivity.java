@@ -1,8 +1,10 @@
-package kr.ac.tukorea.ge.spgp.scgyong.sgp18182037;
+package kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.R;
 
 public class MainActivity extends AppCompatActivity {
 
