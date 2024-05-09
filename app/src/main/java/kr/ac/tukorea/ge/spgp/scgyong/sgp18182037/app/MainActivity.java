@@ -3,7 +3,6 @@ package kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.app;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +22,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnStartGame(View view) {
-        startActivity(new Intent(this, LobbyActivity.class));
+        startActivity(new Intent(this, ReadyActivity.class));
     }
 }

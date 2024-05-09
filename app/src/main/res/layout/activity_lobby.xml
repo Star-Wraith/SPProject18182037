@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/land_1"
     android:gravity="center_vertical"
-    tools:context=".app.LobbyActivity">
+    tools:context=".app.ReadyActivity">
 
     <LinearLayout
         android:id="@+id/choice_layout"

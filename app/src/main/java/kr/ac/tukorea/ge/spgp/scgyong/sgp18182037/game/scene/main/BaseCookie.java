@@ -15,7 +15,7 @@ import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.view.Metrics;
 
 public class BaseCookie extends SheetSprite implements IBoxCollidable {
     public enum State {
-        running, jump, doubleJump, falling, slide, COUNT
+        running, jump, doubleJump, falling, slide, attack, COUNT
     }
     private float jumpSpeed;
     private static final float JUMP_POWER = 9.0f;
@@ -227,6 +227,9 @@ public class BaseCookie extends SheetSprite implements IBoxCollidable {
             fixCollisionRect();
             //return;
         }
+    }
+    public void attack(boolean startsSlide) {
+//        추가 예정
     }
     public boolean onTouch(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
