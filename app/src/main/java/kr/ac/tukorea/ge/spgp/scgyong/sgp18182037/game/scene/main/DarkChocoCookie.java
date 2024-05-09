@@ -13,5 +13,6 @@ public class DarkChocoCookie extends BaseCookie {
         setCoolTime(80.f);
         setPrice(2200.f);
         setSpeed(8.f);
+        setSplash(true);
     }
 }

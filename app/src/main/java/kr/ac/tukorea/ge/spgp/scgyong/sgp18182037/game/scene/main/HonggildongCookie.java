@@ -14,6 +14,7 @@ public class HonggildongCookie extends BaseCookie {
         setCoolTime(120.f);
         setPrice(3000.f);
         setSpeed(10.0f);
+        setSplash(false);
     }
 
 }

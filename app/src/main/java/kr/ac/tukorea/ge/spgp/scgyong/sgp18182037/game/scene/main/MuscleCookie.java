@@ -14,6 +14,7 @@ public class MuscleCookie extends BaseCookie {
         setCoolTime(5.f);
         setPrice(150.f);
         setSpeed(5.0f);
+        setSplash(true);
     }
 
 }

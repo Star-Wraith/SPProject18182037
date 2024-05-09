@@ -14,6 +14,7 @@ public class GumballCookie extends BaseCookie {
         setCoolTime(12.f);
         setPrice(800.f);
         setSpeed(5.0f);
+        setSplash(false);
     }
 
 

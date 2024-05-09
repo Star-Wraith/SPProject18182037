@@ -14,6 +14,7 @@ public class BraveCookie extends BaseCookie {
         setCoolTime(2.5f);
         setPrice(50.f);
         setSpeed(5.0f);
+        setSplash(false);
     }
 
 

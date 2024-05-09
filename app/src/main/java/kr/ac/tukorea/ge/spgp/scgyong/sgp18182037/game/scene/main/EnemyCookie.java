@@ -13,7 +13,7 @@ import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.objects.SheetSprite;
 import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.scene.Scene;
 import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.view.Metrics;
 
-public class BaseCookie extends SheetSprite implements IBoxCollidable {
+public class EnemyCookie extends SheetSprite implements IBoxCollidable {
     public enum State {
         running, jump, doubleJump, falling, slide, COUNT
     }
@@ -46,14 +46,14 @@ public class BaseCookie extends SheetSprite implements IBoxCollidable {
         }
         return rects;
     }
-    public BaseCookie() {
+    public EnemyCookie() {
         super(R.mipmap.cookie_player_sheet, 8);
         setPosition(2.0f, 3.0f, 3.86f, 3.86f);
         srcRects = srcRectsArray[state.ordinal()];
         fixCollisionRect();
     }
 
-    public BaseCookie(int mipmapResId, float fps) {
+    public EnemyCookie(int mipmapResId, float fps) {
         super(mipmapResId, fps);
         setPosition(2.0f, 3.0f, 3.86f, 3.86f);
         srcRects = srcRectsArray[state.ordinal()];
@@ -62,10 +62,9 @@ public class BaseCookie extends SheetSprite implements IBoxCollidable {
 
 
 
-    public float HP = 100.0f;
-    public float ATTACK = 100.0f;
-    public float PRODUCTCOOLTIME = 2.5f;
-    public float PRICE = 50.f;
+    public float HP = 99.0f;
+    public float ATTACK = 20.f;
+    public float KILLPEDRICE = 10.f;
     public float SPEED = 5.0f;
     public boolean SPLASH = false;
 
@@ -85,20 +84,12 @@ public class BaseCookie extends SheetSprite implements IBoxCollidable {
         ATTACK = attack;
     }
 
-    public float getCoolTime() {
-        return PRODUCTCOOLTIME;
+    public float getKilledPrice() {
+        return KILLPEDRICE;
     }
 
-    public void setCoolTime(float cool) {
-        PRODUCTCOOLTIME = cool;
-    }
-
-    public float getPrice() {
-        return PRICE;
-    }
-
-    public void setPrice(float price) {
-        PRICE = price;
+    public void setKilledPrice(float killedprice) {
+        KILLPEDRICE = killedprice;
     }
 
     public float getSpeed() {

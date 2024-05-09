@@ -14,5 +14,6 @@ public class RedCookie extends BaseCookie {
         setCoolTime(60.f);
         setPrice(1200.f);
         setSpeed(7.0f);
+        setSplash(false);
     }
 }

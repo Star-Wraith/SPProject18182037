@@ -13,5 +13,6 @@ public class CheeyCookie extends BaseCookie {
         setCoolTime(20.f);
         setPrice(2000.f);
         setSpeed(7.0f);
+        setSplash(true);
     }
 }
