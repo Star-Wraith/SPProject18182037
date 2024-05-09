@@ -23,6 +23,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnStartGame(View view) {
-        startActivity(new Intent(this, CookieWarActivity.class));
+        startActivity(new Intent(this, LobbyActivity.class));
     }
 }
