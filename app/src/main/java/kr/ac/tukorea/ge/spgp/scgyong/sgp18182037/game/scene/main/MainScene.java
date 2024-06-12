@@ -25,29 +25,33 @@ public class MainScene extends Scene {
             @Override
             public boolean onTouch(Button.Action action, float touchX, float touchY) {
                 if (action == Button.Action.pressed) {
-                    BaseCookie newCookie = new BaseCookie();
+                    BaseCookie newCookie = null;
                     if (touchX < 6.0f) {
                         // 1번 소환
                         System.out.println("1번 소환");
-                        add(Layer.player, newCookie);
+                        newCookie = new BraveCookie();
                     } else if (touchX < 7.5f) {
                         // 2번 소환
                         System.out.println("2번 소환");
-                        add(Layer.player, newCookie);
+                        newCookie = new BorderCookie();
                     } else if (touchX < 9.f) {
                         // 3번 소환
                         System.out.println("3번 소환");
-                        add(Layer.player, newCookie);
+                        newCookie = new CheeyCookie();
                     } else if (touchX < 10.5f) {
                         // 4번 소환
                         System.out.println("4번 소환");
-                        add(Layer.player, newCookie);
+                        newCookie = new MuscleCookie();
                     } else if (touchX < 12.f) {
                         // 5번 소환
                         System.out.println("5번 소환");
-                        add(Layer.player, newCookie);
+
+                        newCookie = new RedCookie();
                     }
-                    baseCookies.add(newCookie);
+                    if (newCookie != null) {
+                        add(Layer.player, newCookie);
+                        baseCookies.add(newCookie);
+                    }
                 }
                 return false;
             }
@@ -55,36 +59,36 @@ public class MainScene extends Scene {
 
         add(Layer.controller, new MapLoader(this));
         add(Layer.controller, new CollisionChecker(this, baseCookies));
-
-        add(Layer.touch, new Button(R.mipmap.btn_slide_n, 1.5f, 8.0f, 2.0f, 0.75f, new Button.Callback() {
-            @Override
-            public boolean onTouch(Button.Action action, float x, float y) {
-                for (BaseCookie cookie : baseCookies) {
-                    cookie.slide(action == Button.Action.pressed);
-                }
-                return true;
-            }
-        }));
-
-        add(Layer.touch, new Button(R.mipmap.btn_jump_n, 14.5f, 7.7f, 2.0f, 0.75f, new Button.Callback() {
-            @Override
-            public boolean onTouch(Button.Action action, float x, float y) {
-                for (BaseCookie cookie : baseCookies) {
-                    cookie.jump();
-                }
-                return false;
-            }
-        }));
-
-        add(Layer.touch, new Button(R.mipmap.btn_fall_n, 14.5f, 8.5f, 2.0f, 0.75f, new Button.Callback() {
-            @Override
-            public boolean onTouch(Button.Action action, float x, float y) {
-                for (BaseCookie cookie : baseCookies) {
-                    cookie.fall();
-                }
-                return false;
-            }
-        }));
+//
+//        add(Layer.touch, new Button(R.mipmap.btn_slide_n, 1.5f, 8.0f, 2.0f, 0.75f, new Button.Callback() {
+//            @Override
+//            public boolean onTouch(Button.Action action, float x, float y) {
+//                for (BaseCookie cookie : baseCookies) {
+//                    cookie.slide(action == Button.Action.pressed);
+//                }
+//                return true;
+//            }
+//        }));
+//
+//        add(Layer.touch, new Button(R.mipmap.btn_jump_n, 14.5f, 7.7f, 2.0f, 0.75f, new Button.Callback() {
+//            @Override
+//            public boolean onTouch(Button.Action action, float x, float y) {
+//                for (BaseCookie cookie : baseCookies) {
+//                    cookie.jump();
+//                }
+//                return false;
+//            }
+//        }));
+//
+//        add(Layer.touch, new Button(R.mipmap.btn_fall_n, 14.5f, 8.5f, 2.0f, 0.75f, new Button.Callback() {
+//            @Override
+//            public boolean onTouch(Button.Action action, float x, float y) {
+//                for (BaseCookie cookie : baseCookies) {
+//                    cookie.fall();
+//                }
+//                return false;
+//            }
+//        }));
     }
 
     @Override
