@@ -21,10 +21,26 @@ public class MainScene extends Scene {
 
         add(Layer.touch, new Button(R.mipmap.list, 8.f, 7.8f, 7.0f, 1.7f, new Button.Callback() {
             @Override
-            public boolean onTouch(Button.Action action) {
+            public boolean onTouch(Button.Action action, float touchX, float touchY) {
+                if (action == Button.Action.pressed) {
+                    if (touchX < 6.0f) {
+                        // 1번 소환
+                        System.out.println("1번 소환");
+                    } else if (touchX < 7.5f) {
+                        // 2번 소환
+                        System.out.println("2번 소환");
+                    } else if (touchX < 9.f) {
+                        // 3번 소환
+                        System.out.println("3번 소환");
+                    } else if (touchX < 10.5f) {
+                        // 3번 소환
+                        System.out.println("4번 소환");
+                    } else if (touchX < 12.f) {
+                        // 3번 소환
+                        System.out.println("5번 소환");
+                    }
 
-                
-
+                }
                 return false;
             }
         }));
@@ -38,21 +54,23 @@ public class MainScene extends Scene {
 
         add(Layer.touch, new Button(R.mipmap.btn_slide_n, 1.5f, 8.0f, 2.0f, 0.75f, new Button.Callback() {
             @Override
-            public boolean onTouch(Button.Action action) {
+            public boolean onTouch(Button.Action action, float x, float y) {
                 baseCookie.slide(action == Button.Action.pressed);
                 return true;
             }
         }));
+
         add(Layer.touch, new Button(R.mipmap.btn_jump_n, 14.5f, 7.7f, 2.0f, 0.75f, new Button.Callback() {
             @Override
-            public boolean onTouch(Button.Action action) {
+            public boolean onTouch(Button.Action action, float x, float y) {
                 baseCookie.jump();
                 return false;
             }
         }));
+
         add(Layer.touch, new Button(R.mipmap.btn_fall_n, 14.5f, 8.5f, 2.0f, 0.75f, new Button.Callback() {
             @Override
-            public boolean onTouch(Button.Action action) {
+            public boolean onTouch(Button.Action action, float x, float y) {
                 baseCookie.fall();
                 return false;
             }

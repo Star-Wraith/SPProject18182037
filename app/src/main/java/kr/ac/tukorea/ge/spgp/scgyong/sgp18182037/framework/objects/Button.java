@@ -11,9 +11,14 @@ public class Button extends Sprite implements ITouchable {
         pressed, released,
     }
     public interface Callback {
-        public boolean onTouch(Action action);
+        default boolean onTouch(Action action) {
+            return onTouch(action, 0.f, 0.f);
+        }
+
+        boolean onTouch(Action action, float x, float y);
     }
     private static final String TAG = Button.class.getSimpleName();
+
     private final Callback callback;
     private boolean processedDown;
     public Button(int bitmapResId, float cx, float cy, float width, float height, Callback callback) {
@@ -26,12 +31,12 @@ public class Button extends Sprite implements ITouchable {
         if (!dstRect.contains(pts[0], pts[1])) {
             return false;
         }
-        //Log.d(TAG, "Button.onTouch(" + System.identityHashCode(this) + ", " + e.getAction() + ", " + e.getX() + ", " + e.getY());
+        Log.d(TAG, "Button.onTouch(" + System.identityHashCode(this) + ", " + e.getAction() + ", " + pts[0] + ", " + pts[1]);
         int action = e.getAction();
         if (action == MotionEvent.ACTION_DOWN) {
-            processedDown = callback.onTouch(Action.pressed);
+            processedDown = callback.onTouch(Action.pressed, pts[0], pts[1]);
         } else if (action == MotionEvent.ACTION_UP && processedDown) {
-            callback.onTouch(Action.released);
+            callback.onTouch(Action.released, pts[0], pts[1]);
         }
         return true;
     }
