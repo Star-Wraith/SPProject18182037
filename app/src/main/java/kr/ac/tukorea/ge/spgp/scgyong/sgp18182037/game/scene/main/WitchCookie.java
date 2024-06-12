@@ -6,11 +6,10 @@ public class WitchCookie extends EnemyCookie {
     public WitchCookie() {
         super(R.mipmap.cookie_player_sheet, 8);
         setPosition(2.0f, 3.0f, 3.86f, 3.86f);
-        srcRects = srcRectsArray[state.ordinal()];
 
         setHP(99.f);
         setAttack(20.f);
-        setKilledPrice(10.f);
+        setKillPrice(10.f);
         setSpeed(5.0f);
         setSplash(false);
     }

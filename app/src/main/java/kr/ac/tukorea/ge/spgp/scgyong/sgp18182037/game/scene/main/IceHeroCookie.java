@@ -6,11 +6,9 @@ public class IceHeroCookie extends EnemyCookie {
     public IceHeroCookie() {
         super(R.mipmap.cookie_player_sheet, 8);
         setPosition(2.0f, 3.0f, 3.86f, 3.86f);
-        srcRects = srcRectsArray[state.ordinal()];
-
         setHP(1500.f);
         setAttack(250.f);
-        setKilledPrice(1000.f);
+        setKillPrice(1000.f);
         setSpeed(12.0f);
         setSplash(false);
     }
