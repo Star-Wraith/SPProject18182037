@@ -7,14 +7,16 @@ import java.util.ArrayList;
 import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.interfaces.IGameObject;
 import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.res.Sound;
 import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.util.CollisionHelper;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CollisionChecker implements IGameObject {
     private final MainScene scene;
-    private final BaseCookie baseCookie;
+    private final List<BaseCookie> baseCookies;
 
-    public CollisionChecker(MainScene scene, BaseCookie baseCookie) {
+    public CollisionChecker(MainScene scene, List<BaseCookie> baseCookies) {
         this.scene = scene;
-        this.baseCookie = baseCookie;
+        this.baseCookies = baseCookies;
     }
 
     @Override
@@ -26,9 +28,12 @@ public class CollisionChecker implements IGameObject {
                 continue;
             }
             Tower item = (Tower) gobj;
-            if (CollisionHelper.collides(baseCookie, item)) {
-                scene.remove(MainScene.Layer.item, gobj);
-                Sound.playEffect(item.getSoundResId());
+            for (BaseCookie baseCookie : baseCookies) {
+                if (CollisionHelper.collides(baseCookie, item)) {
+                    scene.remove(MainScene.Layer.item, gobj);
+                    Sound.playEffect(item.getSoundResId());
+                    break;
+                }
             }
         }
     }
