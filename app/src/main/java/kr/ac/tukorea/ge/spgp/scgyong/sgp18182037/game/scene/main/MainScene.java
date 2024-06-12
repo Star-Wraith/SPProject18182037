@@ -17,6 +17,19 @@ public class MainScene extends Scene {
 
         add(Layer.bg, new HorzScrollBackground(R.mipmap.land_1, 0f));
 
+
+
+        add(Layer.touch, new Button(R.mipmap.list, 8.f, 7.8f, 7.0f, 1.7f, new Button.Callback() {
+            @Override
+            public boolean onTouch(Button.Action action) {
+
+                
+
+                return false;
+            }
+        }));
+
+
         baseCookie = new BaseCookie();
         add(Layer.player, baseCookie);
 
