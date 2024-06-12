@@ -7,7 +7,7 @@ import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.R;
 import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.res.BitmapPool;
 import kr.ac.tukorea.ge.spgp.scgyong.sgp18182037.framework.scene.RecycleBin;
 
-public class JellyItem extends MapObject {
+public class Tower extends MapObject {
     public static final int JELLY_COUNT = 60;
     public static final int RANDOM = JELLY_COUNT + 1;
     private static final int ITEMS_IN_A_ROW = 30;
@@ -24,18 +24,18 @@ public class JellyItem extends MapObject {
             R.raw.jelly_coin,
             R.raw.jelly_big_coin,
     };
-    private JellyItem() {
+    private Tower() {
         super(MainScene.Layer.item);
         bitmap = BitmapPool.get(R.mipmap.jelly);
         srcRect = new Rect();
     }
-    public static JellyItem get(int index, float left, float top) {
+    public static Tower get(int index, float left, float top) {
         if (index == RANDOM) {
             index = random.nextInt(JELLY_COUNT);
         }
-        JellyItem item = (JellyItem) RecycleBin.get(JellyItem.class);
+        Tower item = (Tower) RecycleBin.get(Tower.class);
         if (item == null) {
-            item = new JellyItem();
+            item = new Tower();
         }
         item.init(index, left, top);
         return item;

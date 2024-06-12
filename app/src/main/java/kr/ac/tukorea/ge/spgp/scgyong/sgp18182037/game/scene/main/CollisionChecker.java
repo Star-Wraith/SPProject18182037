@@ -22,10 +22,10 @@ public class CollisionChecker implements IGameObject {
         ArrayList<IGameObject> items = scene.objectsAt(MainScene.Layer.item);
         for (int i = items.size() - 1; i >= 0; i--) {
             IGameObject gobj = items.get(i);
-            if (!(gobj instanceof JellyItem)) {
+            if (!(gobj instanceof Tower)) {
                 continue;
             }
-            JellyItem item = (JellyItem) gobj;
+            Tower item = (Tower) gobj;
             if (CollisionHelper.collides(baseCookie, item)) {
                 scene.remove(MainScene.Layer.item, gobj);
                 Sound.playEffect(item.getSoundResId());

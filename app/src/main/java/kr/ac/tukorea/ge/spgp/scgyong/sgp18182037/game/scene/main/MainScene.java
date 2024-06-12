@@ -16,8 +16,6 @@ public class MainScene extends Scene {
         initLayers(Layer.COUNT);
 
         add(Layer.bg, new HorzScrollBackground(R.mipmap.land_1, 0f));
-        //add(Layer.bg, new HorzScrollBackground(R.mipmap.land_2, -1.0f));
-        //add(Layer.bg, new HorzScrollBackground(R.mipmap.land_3, -1.5f));
 
         baseCookie = new BaseCookie();
         add(Layer.player, baseCookie);
@@ -28,7 +26,6 @@ public class MainScene extends Scene {
         add(Layer.touch, new Button(R.mipmap.btn_slide_n, 1.5f, 8.0f, 2.0f, 0.75f, new Button.Callback() {
             @Override
             public boolean onTouch(Button.Action action) {
-                //Log.d(TAG, "Button: Slide " + action);
                 baseCookie.slide(action == Button.Action.pressed);
                 return true;
             }
