@@ -1,26 +1,6 @@
 # SPProject18182037
 쿠키 대전쟁
 
-## 🎮 게임 컨셉
-
-### High Concept
-쿠키 대전쟁은 디펜스 게임인 냥코대전쟁의 게임방식을 쿠키런 캐릭터들로 구성해보면 좋을 것 같아 제작하는 게임입니다.
-Player는 자신의 쿠키를 이용해서 적 쿠키들을 막고, 상대 건물을 부시는 것이 목표입니다.
-
-### 핵심 메카닉
-- 자원 관리: 자원(젤리)은 시간마다 얻게 되며, 자원으로 그 얻는 속도를 증가시킬 수 있습니다.
-- 엔트리 : Player 쿠키 중 5종류만 엔트리로 설정하여 플레이 할 수 있습니다. 엔트리는 Stage Clear 시 다음 Stage 시작 전에 재배치 할 수 있습니다.
-- 특수 기술: Player의 특수 기술이 일정 시간마다 활성화 되는데 사용 시 적에게 광역피해를 줄 수 있습니다.
-
-
-
-## 개발 범위
-- 총 3Stage
-- Player 쿠키 10종
-- 적 쿠키 10종(Stage당 3종, 3종, 4종 출현 예정)
-- StartMap, 쿠키 엔트리 설정 Map(Ready Map), InGameMap등 button 약 10개
-- Timer
-
 ## 예상 게임 실행 흐름
 
 ### StartMap - Ready Map - InGameMap으로 진행
@@ -140,36 +120,17 @@ Player는 자신의 쿠키를 이용해서 적 쿠키들을 막고, 상대 건�
 
 
 
-## 🎮 5/10 까지의 진행상황
+## 🎮 진행한 부분
 
 - 1주차 : 리소스 수집(90%)
 - 2주차 : StartMap, ReadyMap 제작(80%)
-- 3주차 : Player 쿠키 제작(80%)
-- 4주차 : 쿠키 생성로직 구현(10%)
-- 5주차 : 적 쿠키 제작 (80%)
+- 3주차 : Player 쿠키 제작(90%)
+- 4주차 : 쿠키 생성로직 구현(60%)
+- 5주차 : 적 쿠키 제작 (90%)
+- 6주차 : Stage1 제작, Player 쿠키와 적 쿠키 상호작용 구현(10%)
 
 
-## 주별 커밋 
-![gitcheck](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/beebd5f2-ad2d-4ebb-aca2-9ceb63253753)
-
-|주차|커밋|
-|------|---|
-|1주차|16번|
-|2주차|0번|
-|3주차|4번|
-|4주차|0번|
-|5주차|9번|
-
-## GameObject
-|CLASS|동작|상호작용 정보|핵심|
-|------|---|-----|----|
-|![cookie0001_chest01](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/801bdaf7-3713-4e36-bc4d-75f78ad4fe03)|10종 캐릭터 클래스, 이동, 공격, 사망 | 오른쪽으로 이동하여 적 발견 시 공격| 이름 그대로 캐릭터 클래스, 행동에 따라 이동/공격/사망 state 변환|
-|![cookie0016_chest01](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/d28f0417-d18c-417c-9243-e2ed9a7bbdb1)|10종 적 클래스, 이동, 공격, 사망| 왼쪽으로 이동하여 적 발견 시 공격|적 클래스, 이동/공격/사망 state 변환|
-| ![castle](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/760d0831-9fea-4f03-9e63-c121b614cbed)|지켜야 하는 성 |아군이나 적에게 데미지를 받음|체력이 0이 될 시 GameClear 또는 GameOver|
-|![list](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/51286cd3-5213-4737-8652-26aa2a5b10be)|캐릭터 list|버튼|캐릭터 생성하는 버튼 역할|
-
-
-
-### 수업에서 다루었으면 하는 것
-- 캐릭터가 공격 시 범위데미지를 주는 캐릭터와 단일데미지를 주는 캐릭터는 충돌체크를 어떻게 하는 것이 좋은지
+- 칸마다 다른 쿠키가 생성되도록 구현(애니메이션은 가공해서 넣지 못해 용감한 쿠키로 보이긴 하나 속도등이 다르다.)
+![cookiechoice](https://github.com/Star-Wraith/SPProject18182037/assets/112797166/63106b30-3e82-4a7a-8fce-3470864ff2eb)
+- 이후 적 생성 부분 구현하다 막혀 구현 중단.
 
